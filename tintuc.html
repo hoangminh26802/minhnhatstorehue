@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tin tức - Minh Nhật Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Thanh trên cùng -->
+    <div class="topbar">
+      <div class="logo">
+        <img
+          src="./anh/481780866_122093212556802956_3033451504716178783_n.jpg"
+          alt="Logo"
+        />
+        <span>MINH NHẬT STORE</span>
+      </div>
+
+      <div class="location">
+        <label for="city-select">Xem giá, tồn kho tại:</label>
+        <select id="city-select">
+          <option>Huế</option>
+          <option>Chưa cập nhật</option>
+        </select>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm sản phẩm ..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+
+    <!-- Menu chính -->
+    <nav class="main-menu">
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+        <li><a href="dienthoai.html"><i class="fas fa-mobile-alt"></i> Điện thoại</a></li>
+        <li><a href="phukien.html"><i class="fas fa-headphones-alt"></i> Phụ kiện</a></li>
+        <li><a href="suachua.html"><i class="fas fa-tools"></i> Sửa chữa</a></li>
+        <li class="active"><a href="tintuc.html"><i class="fas fa-newspaper"></i> Tin tức</a></li>
+      </ul>
+    </nav>
+
+    <!-- Phần đầu trang tin tức -->
+    <header class="news-header">
+      <h1>Tin tức mới nhất</h1>
+      <a href="index.html" class="back-link">← Quay về trang chủ</a>
+    </header>
+
+    <!-- Nội dung các bài viết -->
+    <section class="news">
+      <article class="news-item">
+        <h2>🎉 Khuyến mãi lớn mùa hè 2025</h2>
+        <p>
+          Chúng tôi đang có chương trình khuyến mãi cực lớn cho các sản phẩm điện thoại và phụ kiện. Nhiều phần quà hấp dẫn đang chờ bạn!
+        </p>
+        <a href="#">Xem chi tiết</a>
+      </article>
+
+      <article class="news-item">
+        <h2>📱 Ra mắt Xiaomi 14 mới</h2>
+        <p>
+          Xiaomi 14 với thiết kế siêu mỏng và cấu hình mạnh mẽ đã chính thức lên kệ tại Minh Nhật Store với giá cực ưu đãi.
+        </p>
+        <a href="#">Xem chi tiết</a>
+      </article>
+
+      <article class="news-item">
+        <h2>🔧 Dịch vụ sửa chữa chuyên nghiệp</h2>
+        <p>
+          Minh Nhật Store triển khai trung tâm sửa chữa nhanh – lấy ngay sau 30 phút, bảo hành rõ ràng, linh kiện chính hãng.
+        </p>
+        <a href="#">Xem chi tiết</a>
+      </article>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Minh Nhật Store. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

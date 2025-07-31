@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phụ kiện - Minh Nhật Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Thanh trên cùng -->
+    <div class="topbar">
+      <div class="logo">
+        <img
+          src="./anh/481780866_122093212556802956_3033451504716178783_n.jpg"
+          alt="Logo"
+        />
+        <span>MINH NHẬT STORE</span>
+      </div>
+
+      <div class="location">
+        <label for="city-select">Xem giá, tồn kho tại:</label>
+        <select id="city-select">
+          <option>Huế</option>
+          <option>Chưa cập nhật</option>
+        </select>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm sản phẩm ..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="user-buttons">
+        <button class="login-btn"><i class="fas fa-user"></i> Đăng nhập</button>
+        <button class="register-btn">
+          <i class="fas fa-user-plus"></i> Đăng ký
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu điều hướng chính -->
+    <nav class="main-menu">
+      <ul>
+        <li>
+          <a href="index.html"><i class="fas fa-home"></i> Trang chủ</a>
+        </li>
+        <li>
+          <a href="dienthoai.html"
+            ><i class="fas fa-mobile-alt"></i> Điện thoại</a
+          >
+        </li>
+        <li>
+          <a href="phukien.html"
+            ><i class="fas fa-headphones-alt"></i> Phụ kiện</a
+          >
+        </li>
+        <li>
+          <a href="suachua.html"><i class="fas fa-tools"></i> Sửa chữa</a>
+        </li>
+        <li>
+          <a href="tintuc.html"><i class="fas fa-newspaper"></i> Tin tức</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+      <img src="./anh/bia.jpg" alt="Banner Phụ kiện" />
+      <div class="banner-text">
+        <h2>PHỤ KIỆN CHẤT LƯỢNG</h2>
+        <p>Phụ kiện đa dạng, giá cạnh tranh</p>
+        <button>Mua ngay</button>
+      </div>
+    </section>
+
+    <!-- Danh mục hãng -->
+    <div class="brand-menu">
+      <span>Hãng:</span>
+      <a href="#">Apple</a>
+      <a href="#">Samsung</a>
+      <a href="#">Xiaomi</a>
+      <a href="#">Anker</a>
+      <a href="#">Sony</a>
+      <a href="#">Baseus</a>
+      <a href="#">JBL</a>
+      <a href="#">Sennheiser</a>
+      <a href="#">Xem thêm</a>
+    </div>
+
+    <!-- Sản phẩm Phụ kiện -->
+    <section class="products">
+      <div class="product">
+        <input
+          type="checkbox"
+          class="select-product"
+          data-name="Tai nghe Bluetooth JBL"
+          data-price="1500000"
+          title="Chọn Tai nghe Bluetooth JBL"
+        />
+        <img
+          src="./anh/jbl-tune-500bt-768x768.jpg "
+          alt="Tai nghe Bluetooth JBL"
+        />
+        <h3>Tai nghe Bluetooth JBL</h3>
+        <p>Giá: <strong>1.500.000đ</strong></p>
+        <button class="order-btn">Mua ngay</button>
+      </div>
+
+      <div class="product">
+        <input
+          type="checkbox"
+          class="select-product"
+          data-name="Sạc nhanh Anker 20W"
+          data-price="400000"
+          title="Chọn Sạc nhanh Anker 20W"
+        />
+        <img src="./anh/sac.png" alt="Sạc nhanh Anker 20W" />
+        <h3>Sạc nhanh Anker 20W</h3>
+        <p>Giá: <strong>400.000đ</strong></p>
+        <button class="order-btn">Mua ngay</button>
+      </div>
+
+      <div class="product">
+        <input
+          type="checkbox"
+          class="select-product"
+          data-name="Ốp lưng iPhone 13"
+          data-price="300000"
+          title="Chọn Ốp lưng iPhone 13"
+        />
+        <img src="./anh/oplung.jpg" alt="Ốp lưng iPhone 13" />
+        <h3>Ốp lưng iPhone 13</h3>
+        <p>Giá: <strong>300.000đ</strong></p>
+        <button class="order-btn">Mua ngay</button>
+      </div>
+    </section>
+
+    <!-- Giỏ hàng -->
+    <div class="cart" id="cart">
+      <button class="toggle-cart" onclick="toggleCart()">🛒</button>
+      <h3>Giỏ hàng</h3>
+      <ul id="cartItems"></ul>
+      <p>Tổng: <span id="totalPrice">0₫</span></p>
+      <button id="checkoutBtn" disabled>Thanh toán</button>
+    </div>
+    <footer>
+      <p>&copy; 2025 Minh Nhật Store</p>
+    </footer>
+
+    <!-- Form popup đặt hàng -->
+    <div id="orderModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Đặt hàng ngay</h2>
+        <form
+          id="orderForm"
+          action="https://formspree.io/f/mwpqqreg"
+          method="POST"
+        >
+          <label for="name">Họ và tên:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Số điện thoại:</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="address">Địa chỉ:</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+
+          <label for="product">Sản phẩm muốn mua:</label>
+          <input type="text" id="product" name="product" readonly />
+
+          <button type="submit">Gửi đơn hàng</button>
+        </form>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
