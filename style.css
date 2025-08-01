@@ -562,3 +562,154 @@ footer {
   align-items: center;
   z-index: 10000;
 }
+
+/* --- Responsive cho màn hình nhỏ (điện thoại) --- */
+@media (max-width: 600px) {
+  /* Thanh trên cùng (topbar) */
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .topbar .logo {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .topbar .location {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .topbar .location select {
+    width: 100%;
+  }
+
+  .topbar .search-bar {
+    max-width: 100%;
+    margin: 0 0 10px 0;
+    width: 100%;
+  }
+
+  .topbar .search-bar input {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .topbar .search-bar button {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .user-buttons button {
+    margin-left: 0;
+    margin-top: 8px;
+    width: 48%;
+    font-size: 0.9rem;
+  }
+
+  /* Menu điều hướng chính */
+  .main-menu ul {
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+
+  .main-menu ul li {
+    margin-right: 15px;
+    margin-bottom: 8px;
+  }
+
+  /* Banner */
+  .banner-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+
+  /* Danh mục hãng */
+  .brand-menu {
+    padding: 10px 10px;
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+
+  .brand-menu a {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Sản phẩm */
+  .products {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .product img {
+    max-width: 120px;
+    margin-bottom: 8px;
+  }
+
+  .product h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .product p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .product .order-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* Giỏ hàng */
+  .cart {
+    width: 90vw;
+    max-width: none;
+    right: 5vw;
+    bottom: 20px;
+    padding: 12px;
+  }
+
+  .cart h3 {
+    font-size: 1.2rem;
+  }
+
+  .cart ul li {
+    font-size: 0.85rem;
+  }
+
+  .cart button {
+    padding: 8px 0;
+    font-size: 1rem;
+  }
+
+  .toggle-cart {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    top: -36px;
+  }
+
+  /* Modal */
+  .modal-content {
+    width: 90%;
+    max-width: 350px;
+    padding: 20px 20px;
+  }
+
+  #productDetailModal .modal-content {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  #productDetailModal h2 {
+    font-size: 1.3rem;
+  }
+}
